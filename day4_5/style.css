@@ -1,0 +1,386 @@
+body {
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: large;
+    margin-right: 10px;
+}
+
+nav a:hover {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+#search {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    direction: rtl;
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+}
+
+#search input[type="text"] {
+    padding: 5px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-sizing: border-box; 
+}
+
+#search button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    border: 1px solid black; 
+    cursor: pointer;
+}
+
+#search button:hover {
+    background-color: black;
+    color: white;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+header img {
+    width: 100%;
+    height: 410px;
+    object-fit: cover; 
+
+}
+
+header {
+    padding: 0;
+    margin: 0;
+}
+.text-overlay h1 {
+    font-size: 40px;
+    margin: 0;
+    font-weight: normal; 
+    font-family: Bebas Neue;
+}
+
+
+.text-overlay h5 {
+    font-size: 15px;
+    margin: 5px 0;
+    font-weight: bold;
+    font-family: Bebas Neue;
+}
+
+.image_with_h {
+    width: 110%;
+    margin: 0 auto;
+}
+
+.image_with_h img {
+    width: 100%;
+    height: auto;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-size: 30px;
+    margin: 0;
+    font-weight:50px; 
+    font-family: Bebas Neue;
+    text-align: center;
+}
+
+h3 {
+    font-size: 20px;
+    margin: 0;
+    font-weight: 20px; 
+    font-family: Bebas Neue;
+    text-align: center;
+}
+
+h6 {
+    font-size: 14px;
+    margin: 0 auto; 
+    font-weight: normal;  
+    font-family: 'Bebas Neue', sans-serif; 
+    text-align: center; 
+    display: block;  
+    width: 100%;  
+}
+
+#cards {
+    display: flex;  
+    gap: 20px;  
+    justify-content: center;  
+}
+
+.card {
+    text-align: center; 
+    padding: 10px;
+}
+
+.card img {
+    width: 200px; 
+    height: auto;
+}
+
+.card h1 {
+    font-weight: normal;
+}
+
+#middle {
+    background-color: black;
+    color: white;
+}
+
+#middle h1 {
+    font-weight: normal;
+    font-size: 25px;
+}
+
+#middle h6 {
+    font-weight: normal;
+}
+
+#container {
+    text-align: left;
+    background-color: white;
+    height: 30%;
+    width: 70%;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;        
+    margin: auto;
+    color: black;
+    gap: 10px;                  
+}
+
+#container h4, #container button {
+    margin: 5px;                 
+    text-align: left;          
+    align-self: center;        
+    font-weight: normal;
+}
+
+#container button {
+    padding: 5px 10px;                
+    background-color:
+    #f2463c;   
+    color: white;                
+    cursor: pointer;           
+}
+
+#middle-middle {
+    text-align: left;
+    background-color: black ;
+    height: 30%;
+    width: 70%;
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    margin: auto;  
+    color: white;
+    gap: 10px;
+    margin: auto;
+}
+
+#middle-middle img { 
+    width: 100%;           
+    height: 100%;          
+    display: block;
+    margin: 0;            
+    padding: 0;           
+    background-color: transparent; 
+}
+
+#middle-middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: black;
+}
+
+#cards-2 {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;  
+    padding: 10px;
+    scroll-snap-type: x mandatory;  
+}
+
+.card-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    padding: 0;             
+    min-width: 300px;
+    scroll-snap-align: start;  
+}
+
+.card-2 img {
+    border-radius: 15px 15px 0 0;  
+    width: 100%;
+    height: auto;
+    margin: 0; 
+}
+
+button {
+    padding: 5px 10px;   
+    border: solid 1px white;             
+    background-color: black;   
+    color: white;                
+    cursor: pointer;           
+}
+
+button:hover {
+    animation: colorChange 1s infinite alternate;
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: black;
+        color: white;
+    }
+    33% {
+        background-color: blue;
+        color: white;
+    }
+    66% {
+        background-color: green;
+        color: white;
+    }
+    100% {
+        background-color: red;
+        color: white;
+    }
+}
+
+
+#contact {
+    background-color: white;
+    color: black;
+}
+
+#contact h1 {
+    font-weight:600;
+    font-size: 30px;
+}
+
+#contact h6 {
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.container01 {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    width: 100%;
+}
+
+form {
+    width: 50%; 
+}
+
+.right {
+    width: 40%; 
+    text-align: left; 
+}
+
+input[type="text"], input[type="email"] {
+    width: 40%; 
+    margin: 5px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 80%;
+    margin: 5px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+
+.container01 h3 {
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.responsive-image {
+    width: 100%; 
+    height: auto; 
+    max-width: 1500px; 
+}
+
+footer {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: white;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: white;
+  }
