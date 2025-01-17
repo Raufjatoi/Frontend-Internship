@@ -1,0 +1,211 @@
+
+body {
+    background-color: #f5d9d6;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    background-color: #ffe9ef;
+    display: inline-block;
+    position: relative;
+    padding: 1em;
+    margin-right: 1em;
+    font-weight: normal;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav {
+    display: flex;  
+    justify-content: flex-end;
+    background-color: #ffe9ef;
+}
+
+#logo {
+    width: 120px;
+    height: 120px;
+    margin-right: auto;
+    position: fixed; 
+    padding-top: 1em;
+    left: 100px;
+}
+
+#cream-img {
+    height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.7em;
+    font-weight: 700;
+    line-height: 1.5em;
+    text-transform: uppercase;
+}
+button {
+    width: 80px;
+    height: 40px;
+    background-color: #f5d9d6;
+    border: solid black 1px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button:hover {
+    width: 82px;
+    height: 41px;
+    transition: 0.5s;
+}
+
+#new  {
+    background-color: #ffe9ef;
+    height: 100%;
+    width: 100%;
+    color: black;
+    font-weight: bold;
+}
+
+#new h3 {
+    text-align: left;
+    font-size: 1.1em;
+    font-weight: 700;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    background-color: #ffe9ef;
+    margin: 30px;
+}
+
+#new h4 {
+    text-align: center;
+    
+    font-size: 1.3em;
+    font-weight: 700;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    background-color: #ffe9ef;
+    margin-left: -600px;
+
+}
+
+#new p {
+    text-align: center;    
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    background-color: #ffe9ef;
+    margin-left: -600px;
+}
+
+#new img {
+    background-color: #ffe9ef;
+    height: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: 100px;
+} 
+
+#collections * {
+    background-color:#ffe9ef;
+}
+
+#collections h3 {
+    text-align: right;
+    font-size: 1.1em;
+    font-weight: 700;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    margin: 30px;
+    background-color:  #ffe9ef;
+}
+
+.buttons { 
+    padding: 10px; 
+    align-items: center;
+    justify-content: center;
+    display: flex;
+ }
+ 
+input { 
+    width: 400px;
+    height: 120px;
+    margin: 0; 
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; 
+        align-items: center;    
+    }
+    nav a {
+        margin-right: 0;  
+        margin-bottom: 0.5em; 
+        padding: 0.5em;   
+    }
+    #logo {
+        left: 10px; 
+        width: 80px;  
+        height: 80px;
+    }
+    #cream-img {
+        height: auto;  
+        max-width: 100%;  
+    }
+    h1 {
+        font-size: 1.5em;  
+        text-align: right;
+    }
+    #cream h1 {
+        font-size: 1.5em;  
+        padding: 10px;
+
+    }
+    button {
+        width: 60px;   
+        height: 30px;
+    }
+    #footer input {
+        width: 90%;
+        height: 60px;
+    }
+    input {
+        width: 90%;  
+        height: 60px;  
+    }
+
+    #new p,
+    #new h4 {
+        margin-left: 0;  
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em;  
+    }
+    #new p,
+    #new h4 {
+        margin-left: 0;  
+        text-align: center;
+    }
+    #collections h3 {
+        text-align: center;  
+    }
+    .buttons {
+        flex-direction: column; 
+    }
+    button {
+        width: 100%;  
+    }
+}
