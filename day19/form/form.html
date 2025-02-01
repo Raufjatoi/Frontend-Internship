@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form Example</title>
+</head>
+<body>
+    <div id="formContainer"></div>
+
+    <script>
+        // JavaScript code to create and add the form
+        const formContainer = document.getElementById('formContainer');
+
+        // Create a form element
+        const form = document.createElement('form');
+
+        // Create an input element
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.placeholder = 'Enter your name';
+
+        // Create a submit button
+        const submitButton = document.createElement('button');
+        submitButton.type = 'submit';
+        submitButton.textContent = 'Submit';
+
+        // Add the input and button to the form
+        form.appendChild(input);
+        form.appendChild(submitButton);
+
+        // Add the form to the container
+        formContainer.appendChild(form);
+
+        // Optional: Add an event listener to handle form submission
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+            alert('Form submitted! Name: ' + input.value);
+        });
+    </script>
+</body>
+</html>

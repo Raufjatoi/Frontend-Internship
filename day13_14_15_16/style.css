@@ -322,7 +322,7 @@ h3 {
         }
         
         .tech-item img {
-            width: 80px; /* Adjust size of the logos */
+            width: 80px; 
             height: 80px;
             margin-bottom: 5px;
         }
@@ -332,16 +332,14 @@ h3 {
             margin: 0;
         }
         
-        /* Medium Screens - 2 per row */
         @media (max-width: 768px) {
             .tech-grid {
-                grid-template-columns: repeat(2, 1fr); /* 2 columns */
+                grid-template-columns: repeat(2, 1fr); 
             }
         }
         
-        /* Small Screens - 1 per row */
         @media (max-width: 480px) {
             .tech-grid {
-                grid-template-columns: 1fr; /* 1 column */
+                grid-template-columns: 1fr; 
             }
         }

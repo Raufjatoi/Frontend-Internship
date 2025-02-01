@@ -1,0 +1,42 @@
+body {
+    background-color: black;
+    color: azure;
+}
+
+form {
+    margin-top: 100px;
+    text-align: center;
+}
+
+input {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    gap: 10px;
+    background-color: black;
+    border: 1px solid yellow;
+    color: white
+}
+
+input:hover {
+    background: yellow;
+    color: black;
+}
+
+button {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    gap: 10px;
+    background-color: black;
+    border: 1px solid yellow;
+    color: gray;
+
+}
+
+button:hover {
+    background: yellow;
+    color: black;
+}

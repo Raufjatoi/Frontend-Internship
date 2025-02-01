@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> JavaScript </title>
+    </head>
+    <body>
+         <p id="demo"></p>
+         <p id="demo1"></p>
+         <br>
+         <p id="demo2"></p>
+         <p id="demo3"></p>
+         <script>
+            function person(first, last, age, eye) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+            }
+
+            const myFather = new person("Illahi", "Bux", 50, "dark brown");
+            const myBrother = new person("Farhan" , "Jatoi" , 17, "dark brown");
+            const mySelf = new person("Abdul", "Rauf", 21 , "dark brown");
+
+
+            let text = "";
+            for (let x in mySelf) {
+            text += mySelf[x] + " ";
+            };
+
+            const myArray = Object.values(myBrother);
+
+            const fruits = {Bananas:300, Oranges:200, Apples:500};
+
+            let text1 = "";
+            for (let [fruit, value] of Object.entries(fruits)) {
+            text += fruit + ": " + value + "<br>";
+            }
+
+            let myString = JSON.stringify(person);
+
+            document.getElementById("demo").innerHTML = myBrother
+            document.getElementById("demo").innerHTML = mySelf.firstName + "," + mySelf.lastName + "," + mySelf.age + "," + mySelf.eyeColor;
+            document.getElementById("demo1").innerHTML = text;
+            document.getElementByID("demo2").innerHTML = myArray;
+            document.getElementById("demo2").innerHTML = text1;
+            document.getElementById("demo3").innerHTML = JSON.stringify(myFather);
+</script>
+    </body>
+
+</html>

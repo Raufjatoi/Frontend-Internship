@@ -1,0 +1,25 @@
+body {
+    background-color: black;
+    color: whitesmoke;
+}
+
+h1 , h2 {
+    margin-top: 10px;
+    text-align: center;
+    border: solid 0.5px yellow;
+}
+
+form {
+    text-align: center;
+}
+
+input {
+    background-color: black;
+    color: white;
+    border: 1px solid yellow;
+}
+
+input:hover {
+    background-color: yellow;
+    color: black;
+}
