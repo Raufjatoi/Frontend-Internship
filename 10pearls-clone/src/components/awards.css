@@ -1,0 +1,25 @@
+.normal {
+    font-weight: normal;
+    font-size: small;
+}
+.bold-underline {
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: left;
+}
+
+.underline {
+    font-size: x-small;
+    text-decoration: underline;
+}
+
+.underline:hover {
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+.logob {
+    width: 100px;
+    height: 50px;
+}

@@ -1,0 +1,27 @@
+h6 {
+    color: whitesmoke;
+    font-weight: normal;
+    font-size: xx-small;
+}
+
+.yellowg {
+    color: #D4FF27;
+    font-size: medium;
+}
+
+.underlineM {
+    text-decoration: underline #D4FF27 ;
+    color: white;
+    font-size: small;
+    text-align: right;
+    direction: rtl;
+}
+
+.lightwhite {
+    background-color: #F3F5F7;
+}
+
+.fix {
+    margin: 30px;
+    font-size: large;
+}

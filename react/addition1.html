@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <title> Addition </title>
+    </head>
+    <body>
+        <div id="app"></div>
+
+        <script type="text/babel">
+
+            class App extends React.Component {
+
+                constructor(props){
+                    super(props);
+                    this.state = {
+                        num1: 1,
+                        num2:1,
+                        score:0,
+                        response:""
+                    }
+                }
+
+                render(){
+                    return (
+                        <div>
+                            <h1> {this.state.num1} + {this.state.num2} </h1>
+                            <input value={this.state.response} onChange={this.updateResponse} onkeyPress={this.inputKeyPress}></input>
+                            <div>
+                                Score: {this.state.response}
+                            </div>
+                        </div>
+                    );
+                }
+
+                updateResponse = (event) => {
+                    this.setState ({
+                        response: event.target.value
+                    });
+                }
+            }
+            ReactDOM.render(<App/> , document.querySelector('#app'))
+        </script>
+    </body>
+</html>

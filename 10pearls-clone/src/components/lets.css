@@ -1,0 +1,22 @@
+.margin-space {
+    padding-top: 30px;
+    padding-bottom: 400px
+} 
+
+.underline-yellow {
+    text-decoration: underline 5px #D4FF27;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.sizeH {
+    width:300px;
+    height: 300px;
+    margin: 40px;
+    padding-top: 0%;
+    margin-top: 0%;
+}
+
+.smallH6 {
+    font-size: medium;
+}

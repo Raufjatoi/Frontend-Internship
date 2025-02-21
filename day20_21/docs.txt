@@ -1,0 +1,13 @@
+1-> npx create-next-app@latest my-crud-app
+
+2-> cd my-crud-app
+
+3-> npm install sqlite3
+
+code database.db then save
+
+4-> node -e "import('./lib/db.js').then(db => db.setupDb())"
+
+5-> npm run dev
+
+

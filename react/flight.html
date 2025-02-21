@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Flights</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const passengers = ["Abdul Rauf", "Ali"];
+        const flights = ["PK-123", "PK-456"];
+
+        class Flight extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {status: "On Time"};
+            }
+
+            passengerOnBoard = () => {
+                this.setState({status: "Passenger On Board"});
+            }
+
+            delay = () => {
+                this.setState({status: "Delayed"});
+            }
+
+            render() {
+                return (
+                    <div>
+                        <h2 id="box">Flight Status: {this.state.status}</h2>
+                        <button onClick={this.passengerOnBoard}>Passenger On Board</button>
+                        <button onClick={this.delay}>Delay</button>
+                    </div>
+                );
+            }
+        }
+
+        function Header() {
+            return <h1 id="header">Flight System</h1>;
+        }
+
+        function Footer() {
+            return <p id="footer">Powered by React ⚛️</p>;
+        }
+
+        function Options() {
+            const [view, setView] = React.useState(null);
+
+            return (
+                <div> 
+                    <button onClick={() => setView("passenger")}>Passengers</button>
+                    <button onClick={() => setView("flights")}>Flights</button>
+
+                    {view === "passenger" && (
+                        <div id="passenger">
+                            <h2>Passengers</h2>
+                            <ul>
+                                {passengers.map((passenger, i) => (
+                                    <li key={i}>{passenger}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+
+                    {view === "flights" && (
+                        <div id="flights">
+                            <h2>Flights</h2>
+                            <ul>
+                                {flights.map((flight, i) => (
+                                    <li key={i}>{flight}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+                </div>
+            );
+        }
+
+        function App() {
+            return (
+                <div>
+                    <Header />
+                    <Flight />
+                    <Options />
+                    <Footer />
+                </div>
+            );
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

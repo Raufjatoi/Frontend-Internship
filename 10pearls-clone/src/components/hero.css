@@ -1,0 +1,13 @@
+img {
+    height: 25px;
+}
+
+button {
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+}
+button:hover {
+    border: none;
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Main Topics Demo</title>
+    <!-- React and ReactDOM CDN -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <!-- Babel CDN to enable JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        // Functional Component
+        function Header() {
+            return <h1>Welcome to React Main Topics Demo!</h1>;
+        }
+
+        // Class Component
+        class Counter extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = { count: 0 };
+            }
+
+            increment = () => {
+                this.setState({ count: this.state.count + 1 });
+            };
+
+            decrement = () => {
+                this.setState({ count: this.state.count - 1 });
+            };
+
+            render() {
+                return (
+                    <div>
+                        <h2>Counter: {this.state.count}</h2>
+                        <button onClick={this.increment}>+</button>
+                        <button onClick={this.decrement}>-</button>
+                    </div>
+                );
+            }
+        }
+
+        // Props Example
+        function Greeting(props) {
+            return <p>Hello, {props.name}!</p>;
+        }
+
+        // State and Lifecycle Example
+        class Clock extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = { time: new Date().toLocaleTimeString() };
+            }
+
+            componentDidMount() {
+                this.timerID = setInterval(() => this.tick(), 1000);
+            }
+
+            componentWillUnmount() {
+                clearInterval(this.timerID);
+            }
+
+            tick() {
+                this.setState({ time: new Date().toLocaleTimeString() });
+            }
+
+            render() {
+                return <h3>Current Time: {this.state.time}</h3>;
+            }
+        }
+
+        // Conditional Rendering Example
+        function UserStatus({ isLoggedIn }) {
+            return isLoggedIn ? <p>Welcome back!</p> : <p>Please log in.</p>;
+        }
+
+        // List and Keys Example
+        function TodoList({ todos }) {
+            return (
+                <ul>
+                    {todos.map((todo, index) => (
+                        <li key={index}>{todo}</li>
+                    ))}
+                </ul>
+            );
+        }
+
+        // Forms Example
+        class FormExample extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = { inputText: '' };
+            }
+
+            handleChange = (event) => {
+                this.setState({ inputText: event.target.value });
+            };
+
+            handleSubmit = (event) => {
+                event.preventDefault();
+                alert(`Submitted: ${this.state.inputText}`);
+            };
+
+            render() {
+                return (
+                    <form onSubmit={this.handleSubmit}>
+                        <input
+                            type="text"
+                            value={this.state.inputText}
+                            onChange={this.handleChange}
+                            placeholder="Type something..."
+                        />
+                        <button type="submit">Submit</button>
+                    </form>
+                );
+            }
+        }
+
+        // Main App Component
+        function App() {
+            return (
+                <div>
+                    <Header />
+                    <Greeting name="Rauf" />
+                    <Counter />
+                    <Clock />
+                    <UserStatus isLoggedIn={true} />
+                    <TodoList todos={["Learn React", "Practice Coding", "Build Projects"]} />
+                    <FormExample />
+                </div>
+            );
+        }
+
+        // Rendering the App component
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

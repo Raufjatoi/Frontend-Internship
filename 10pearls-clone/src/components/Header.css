@@ -1,0 +1,89 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    background-color:black;
+    margin-top: none;
+  }
+  
+  .navbar-brand img {
+    height: 25px;
+  }
+  
+  .navbar-toggle {
+    display: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .navbar-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.7rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    text-decoration: greenyellow underline;
+  }
+  
+  button {
+    font-size: 0.7rem;
+    background-color: white;
+    padding: 0.2rem 0.7rem;
+    margin-left: 1rem;
+    border: none;
+  }
+
+  button:hover {
+    background-color: greenyellow;
+    color: black;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-toggle {
+      display: block;
+    }
+  
+    .navbar-links {
+      position: absolute;
+      top: 100%; 
+      right: 0;
+      width: 100%;
+      background-color: black;
+      flex-direction: column;
+      padding: 1rem;
+      display: none;
+      z-index: 1000;
+    }
+  
+    .navbar-links.active {
+      display: flex;
+    }
+  
+    .navbar-links a {
+      padding: 0.5rem 0;
+    }
+  
+    .navbar-btn {
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .navbar-links {
+      position: static;
+      flex-direction: row;
+      display: flex !important;
+    }
+  }

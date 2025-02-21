@@ -1,0 +1,24 @@
+.text-left-underline {
+    text-align: left;
+    text-decoration: underline #D4FF27 5px;
+}
+
+.bg-yellow {
+    background-color: #D4FF27;
+    font-size: x-small;
+    text-align: left;
+}
+
+.padding {
+    padding: 0.5px;
+}
+
+.margin {
+    margin: 50px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.size {
+    font-size: large;
+}
